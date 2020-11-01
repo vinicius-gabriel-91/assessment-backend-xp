@@ -57,11 +57,11 @@
         <?php foreach ($listaCategoria as $linha):?>
         <tr class="data-row">
             <td class="data-grid-td">
-                <span class="data-grid-cell-content"><?php echo $linha["codigo"]; ?></span>
+                <span class="data-grid-cell-content"><?php echo $linha["nome"]; ?></span>
             </td>
 
             <td class="data-grid-td">
-                <span class="data-grid-cell-content"><?php echo $linha["nome"]; ?></span>
+                <span class="data-grid-cell-content"><?php echo $linha["codigo"]; ?></span>
             </td>
 
             <td class="data-grid-td">
