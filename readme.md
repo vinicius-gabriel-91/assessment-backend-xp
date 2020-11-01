@@ -31,5 +31,5 @@ O MySQL Workbench foi utilizado para modelagem de dados:
 
 *Vinicius Santos*
 
-* [LinkedIn](www.linkedin.com/in/vinicius-gsantos)
+* [LinkedIn](https://www.linkedin.com/in/vinicius-gsantos)
 * [Currículo](./docs/CV_-_Vinicius_Santos.pdf)
