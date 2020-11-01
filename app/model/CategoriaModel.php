@@ -7,7 +7,6 @@ class CategoriaModel
     private $connection;
     private $id;
 
-
     public function __construct()
     {
         $this->connection = mysqli_connect(
@@ -27,6 +26,16 @@ class CategoriaModel
     public function getNome()
     {
         return $this->nome;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function setCodigo($codigo)
@@ -62,23 +71,27 @@ class CategoriaModel
         return $select;
     }
 
-    public function getinfo($id)
+    public function getInfo($id)
     {
         $query = sprintf(
             "select id, nome, codigo from categoria where id = %d",
             $id
         );
+
         $select =  mysqli_query($this->connection,$query);
+
         if (!$select) {
             $message = 'Invalid query: ' . mysqli_error() . "\n";
             $message .= 'Whole query: ' . $query;
             die($message);
         }
-        $select = $select->fetch_row(MYSQLI_ASSOC);
 
-        $this->codigo = $select->codigo;
-        $this->nome = $select->nome;
-        $this->id = $select->id;
+        $selectResult = $select->fetch_row();
+
+        $this->id = $selectResult[0];
+        $this->nome = $selectResult[1];
+        $this->codigo = $selectResult[2];
+
         return $this;
     }
 

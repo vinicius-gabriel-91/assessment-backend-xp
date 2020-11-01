@@ -39,8 +39,9 @@
 <!-- Main Content -->
 <main class="content">
     <div class="header-list-page">
-        <h1 class="title">Categories</h1>
-        <a href="addCategory.html" class="btn-action">Add new Category</a>
+      <form method="post" action="/categoria/index.php">
+          <input type="submit" name="action" id="submit-action-new" class="btn-action" value="Novo" />
+      </form>
     </div>
     <table class="data-grid">
         <tr class="data-row">
@@ -57,11 +58,11 @@
         <?php foreach ($listaCategoria as $linha):?>
         <tr class="data-row">
             <td class="data-grid-td">
-                <span class="data-grid-cell-content"><?php echo $linha["codigo"]; ?></span>
+                <span class="data-grid-cell-content"><?php echo $linha["nome"]; ?></span>
             </td>
 
             <td class="data-grid-td">
-                <span class="data-grid-cell-content"><?php echo $linha["nome"]; ?></span>
+                <span class="data-grid-cell-content"><?php echo $linha["codigo"]; ?></span>
             </td>
 
             <td class="data-grid-td">

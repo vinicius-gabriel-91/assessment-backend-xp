@@ -94,7 +94,7 @@ Class ProdutoModel
         $select = $select->fetch_all(MYSQLI_ASSOC);
         return $select;
     }
-    public function getinfo($id)
+    public function getInfo($id)
     {
         $query = sprintf( // defindo a query
             "select nome, sku, preco, descricao, quantidade, id from produto where id = %d", // trazer codigo e nome da tabela categoria
