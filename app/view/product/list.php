@@ -40,7 +40,9 @@
   <main class="content">
     <div class="header-list-page">
       <h1 class="title">Products</h1>
-      <a href="addProduct.html" class="btn-action">Add new Product</a>
+      <form method="post" action="/produto/index.php">
+          <input type="submit" name="action" id="submit-action-edit" class="btn-action" value="Novo" />
+      </form>
     </div>
     <table class="data-grid">
       <tr class="data-row">
@@ -55,9 +57,6 @@
         </th>
         <th class="data-grid-th">
             <span class="data-grid-cell-content">Quantity</span>
-        </th>
-        <th class="data-grid-th">
-            <span class="data-grid-cell-content">Categories</span>
         </th>
 
         <th class="data-grid-th">
@@ -77,9 +76,6 @@
         </td>
         <td class="data-grid-td">
             <span class="data-grid-cell-content"><?php echo $linha["quantidade"];?></span>
-        </td>
-        <td class="data-grid-td">
-            <span class="data-grid-cell-content"><?php //echo $linha["nome"];?></span>
         </td>
         <td class="data-grid-td">
             <form class="actions" method="post" action="/produto/index.php">

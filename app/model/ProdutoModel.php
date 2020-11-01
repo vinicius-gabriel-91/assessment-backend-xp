@@ -21,29 +21,39 @@ Class ProdutoModel
         );
     }
 
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
     public function setNome($nome)
     {
         $this->nome = $nome;
     }
+
     public function setSku($sku)
     {
-        $this->nome = $sku;
+        $this->sku = $sku;
     }
+
     public function setPreco($preco)
     {
-        $this->nome = $preco;
+        $this->preco = $preco;
     }
+
     public function setDescricao($descricao)
     {
-        $this->nome = $descricao;
+        $this->descricao = $descricao;
     }
+
     public function setQuantidade($quantidade)
     {
-        $this->nome = $quantidade;
+        $this->quantidade = $quantidade;
     }
-    public function setCategoria($categoria)
+
+    public function getId()
     {
-        $this->nome = $categoria;
+        return $this->id;
     }
 
     public function getNome()
@@ -97,18 +107,27 @@ Class ProdutoModel
     public function getInfo($id)
     {
         $query = sprintf( // defindo a query
-            "select nome, sku, preco, descricao, quantidade, id from produto where id = %d", // trazer codigo e nome da tabela categoria
+            "select id, nome, sku, preco, descricao, quantidade from produto where id = %d", // trazer codigo e nome da tabela categoria
             $id // com o codigo informado pelo parametro
         );
-        $select =  mysqli_query($this->connection,$query);
+
+        $select = mysqli_query($this->connection,$query);
+
         if (!$select) {
             $message = 'Invalid query: ' . mysqli_error() . "\n";
             $message .= 'Whole query: ' . $query;
             die($message);
         }
-        $select = $select->fetch_row(MYSQLI_ASSOC);
 
-        $select = $select->id;
+        $selectResult = $select->fetch_row();
+
+        $this->id = $selectResult[0];
+        $this->nome = $selectResult[1];
+        $this->sku = $selectResult[2];
+        $this->preco = $selectResult[3];
+        $this->descricao = $selectResult[4];
+        $this->quantidade = $selectResult[5];
+
         return $this;
 
     }
