@@ -7,6 +7,11 @@
 5. Edite a sua versão de `config.php` e coloque as configurações de conexão ao seu MySQL
 6. Acesse o site com o seu browser
 
+## Requisitos do sistema
+* PHP 7.x
+* MySQL 5.7
+* Apache 2.4 (opcional)
+
 ## Sprint
 
 Como parte do exercício foi simulada uma sprint através da ferramenta [Trello](https://trello.com/b/A9Dni7rH/sprint):
@@ -21,3 +26,10 @@ Como parte do exercício foi simulada uma sprint através da ferramenta [Trello]
 O MySQL Workbench foi utilizado para modelagem de dados:
 
 ![Modelagem](./docs/modelagem.png)
+
+## Autor
+
+*Vinicius Santos*
+
+* [LinkedIn](www.linkedin.com/in/vinicius-gsantos)
+* [Currículo](./docs/CV_-_Vinicius_Santos.pdf)
