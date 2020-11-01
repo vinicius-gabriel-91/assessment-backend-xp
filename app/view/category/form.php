@@ -40,8 +40,8 @@
   <main class="content">
     <h1 class="title new-item">New Category</h1>
     
-    <form method="post" action="Confirminsertion.php">
-        <input type="hidden" name="categoryId" id="categoryId" value="<?php echo $categoriaModel->getId(); ?>" />
+    <form method="post" action="/categoria/index.php">
+      <input type="hidden" name="categoryId" id="categoryId" value="<?php echo $categoriaModel->getId(); ?>" />
       <div class="input-field">
         <label for="categoryName" class="label">Category Name</label>
         <input type="text" name="categoryName" id="categoryName" class="input-text" value="<?php echo $categoriaModel->getNome(); ?>" />
@@ -54,7 +54,7 @@
       </div>
       <div class="actions-form">
         <a href="../../categories.html" class="action back">Back</a>
-        <input class="btn-submit btn-action"  type="submit" value="Save" />
+        <input class="btn-submit btn-action" name="action" type="submit" value="Salvar" />
       </div>
     </form>
   </main>

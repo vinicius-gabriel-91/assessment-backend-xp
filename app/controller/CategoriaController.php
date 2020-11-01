@@ -10,6 +10,8 @@ class CategoriaController
                 $this->deletar();
             } elseif ($_POST["action"] == "Editar" || $_POST["action"] == "Novo") {
                 $this->editar();
+            } elseif ($_POST["action"] == "Salvar") {
+                $this->salvar();
             } else {
                 // senão retorno a lista por padrão
                 $this->listar();
@@ -45,5 +47,21 @@ class CategoriaController
         }
 
         include_once __DIR__ . "/../view/category/form.php";
+    }
+
+    public function salvar()
+    {
+        $categoriaModel = new CategoriaModel();
+        $categoriaModel->setCodigo($_POST["categoryCode"]);
+        $categoriaModel->setNome($_POST["categoryName"]);
+
+        if (empty($_POST["categoryId"])) {
+            $categoriaModel->addCategoria();
+        } else {
+            $categoriaModel->setId($_POST["categoryId"]);
+            $categoriaModel->updateCategoria();
+        }
+
+        $this->listar();
     }
 }
