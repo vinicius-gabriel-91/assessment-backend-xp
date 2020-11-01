@@ -4,13 +4,16 @@ class CategoriaController
 {
     public function __construct()
     {
+        // Verifico se tem uma ação setada
          if (isset($_POST["action"])) {
             if ($_POST["action"] == "Apagar") {
                 $this->deletar();
             } else {
+                // senão retorno a lista por padrão
                 $this->listar();
             }
         } else {
+             // senão retorno a lista por padrão
             $this->listar();
         }
     }

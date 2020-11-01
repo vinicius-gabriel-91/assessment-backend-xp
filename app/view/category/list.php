@@ -65,7 +65,7 @@
             </td>
 
             <td class="data-grid-td">
-                <form class="actions" method="post" action="./">
+                <form class="actions" method="post" action="/categoria/index.php">
                     <input type="hidden" name="id" value="<?php echo $linha["id"]; ?>" />
                     <input type="submit" name="action" id="submit-action-edit" class="action edit" value="Editar" />
                     <input type="submit" name="action" id="submit-action-delete" class="action delete" value="Apagar" />
