@@ -8,7 +8,7 @@ class CategoriaController
          if (isset($_POST["action"])) {
             if ($_POST["action"] == "Apagar") {
                 $this->deletar();
-            } elseif ($_POST["action"] == "Editar") {
+            } elseif ($_POST["action"] == "Editar" || $_POST["action"] == "Novo") {
                 $this->editar();
             } else {
                 // senão retorno a lista por padrão
@@ -39,7 +39,10 @@ class CategoriaController
     public function editar()
     {
         $categoriaModel = new CategoriaModel();
-        $categoriaModel->getInfo($_POST["id"]);
+
+        if (isset($_POST["id"])) {
+            $categoriaModel->getInfo($_POST["id"]);
+        }
 
         include_once __DIR__ . "/../view/category/form.php";
     }
