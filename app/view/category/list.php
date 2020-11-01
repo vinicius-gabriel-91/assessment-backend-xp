@@ -65,11 +65,11 @@
             </td>
 
             <td class="data-grid-td">
-            <td class="data-grid-td">
-                <div class="actions">
-                    <div class="action edit"><span>Edit</span></div>
-                    <div class="action delete"><span>Delete</span></div>
-                </div>
+                <form class="actions" method="post" action="./">
+                    <input type="hidden" name="id" value="<?php echo $linha["id"]; ?>" />
+                    <input type="submit" name="action" id="submit-action-edit" class="action edit" value="Editar" />
+                    <input type="submit" name="action" id="submit-action-delete" class="action delete" value="Apagar" />
+                </form>
             </td>
         </tr>
         <?php endforeach; ?>
