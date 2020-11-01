@@ -7,6 +7,17 @@
 5. Edite a sua versão de `config.php` e coloque as configurações de conexão ao seu MySQL
 6. Acesse o site com o seu browser
 
-# Sprint
+## Sprint
 
-Como parte do exercício foi simulada uma sprint através da ferramenta Trello
+Como parte do exercício foi simulada uma sprint através da ferramenta [Trello](https://trello.com/b/A9Dni7rH/sprint):
+
+![board 01](./docs/board01.png)
+
+
+![board 02](./docs/board02.png)
+
+## Banco de dados
+
+O MySQL Workbench foi utilizado para modelagem de dados:
+
+![Modelagem](./docs/modelagem.png)
