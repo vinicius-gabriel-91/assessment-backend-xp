@@ -18,18 +18,18 @@
       <img src="/assets/images/bt-close.png" alt="Close Menu" width="24" height="24" />
     </a>
   </div>
-  <a href="../../dashboard.html"><img src="/assets/images/menu-go-jumpers.png" alt="Welcome" width="200" height="43" /></a>
+  <a href="/"><img src="/assets/images/menu-go-jumpers.png" alt="Welcome" width="200" height="43" /></a>
   <div>
     <ul>
-      <li><a href="../../categories.html" class="link-menu">Categorias</a></li>
-      <li><a href="../../products.php" class="link-menu">Produtos</a></li>
+      <li><a href="/categoria" class="link-menu">Categorias</a></li>
+      <li><a href="/produto" class="link-menu">Produtos</a></li>
     </ul>
   </div>
 </amp-sidebar>
 <header>
   <div class="go-menu">
     <a on="tap:sidebar.toggle">☰</a>
-    <a href="../../dashboard.html" class="link-logo"><img src="/assets/images/go-logo.png" alt="Welcome" width="69" height="430" /></a>
+    <a href="/" class="link-logo"><img src="/assets/images/go-logo.png" alt="Welcome" width="69" height="430" /></a>
   </div>
   <div class="right-box">
     <span class="go-title">Administration Panel</span>
@@ -45,15 +45,13 @@
       <div class="input-field">
         <label for="categoryName" class="label">Category Name</label>
         <input type="text" name="categoryName" id="categoryName" class="input-text" value="<?php echo $categoriaModel->getNome(); ?>" />
-        
       </div>
       <div class="input-field">
         <label for="category-code" class="label">Category Code</label>
         <input type="text" name="categoryCode" id="categoryCode" class="input-text" value="<?php echo $categoriaModel->getCodigo(); ?>" />
-        
       </div>
       <div class="actions-form">
-        <a href="../../categories.html" class="action back">Back</a>
+        <a href="/categoria" class="action back">Back</a>
         <input class="btn-submit btn-action" name="action" type="submit" value="Salvar" />
       </div>
     </form>
